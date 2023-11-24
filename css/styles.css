@@ -1,0 +1,1365 @@
+
+/* GENERAL RESET */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root{
+    
+    --transition: all 300ms ease;
+
+    --container-width-lg: 74%;
+    --container-width-md: 88%;
+    --form-width: 40%;
+
+    --card-border-radius-1: 0.3rem;
+    --card-border-radius-2: 0.5rem;
+    --card-border-radius-3: 0.8;
+    --card-border-radius-3: 2rem;
+    --card-border-radius-5: 5rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+}
+
+/* GENERAL STYLING */
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.white{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 20px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+/*============================= SEARCH ========================== */
+.search_bar{
+    margin-top: 2rem;
+}
+.search_bar-container{
+    position: relative;
+    width: 30rem;
+    background: #f3f5f3;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    color: #333;
+}
+
+.search_bar-container > div{
+    outline: none;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search_bar input{
+    border: 1px solid #333;
+    border-radius: 3px;
+    background: transparent;
+    margin-left: 0.7rem;
+    padding: 0.5rem 0.3rem;
+    width: 100%;
+}
+
+.search_bar input::placeholder{
+    color: black;
+}
+
+.search_bar-container button{
+    display: block;
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 100px;
+    padding: 3px 3px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.search_bar-container button:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: red;
+    outline: none;
+    border: 2px solid #000;
+}
+
+
+/* HEADER / NAVBARS */
+
+/* HEADER */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: red;
+    box-shadow: 0 5x 15px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+ #navbar{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+#navbar li{
+    list-style-type: none;
+    padding-left: 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: #fff ;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover{
+    color: #088178;
+} */
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
+#nav-location{
+    margin-top: 12px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/* HEADER 2 */
+#header2{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 20px;
+    box-shadow: 0 5x 15px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    position: sticky;
+    top: 49px;
+    left: 0;
+}
+
+#header2-images{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header2-images #img-1{
+    width: 70px;
+}
+
+#header2-images #img-2{
+    padding-left: 10px;
+    border-left: 1px solid #cccbcb;
+}
+
+
+#header2-ul ul{
+    margin-top: 15px;
+    display: flex;
+    list-style-type: none;
+}
+
+#header2-ul ul li{
+    padding-left: 20px;
+}
+
+#header2-ul ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+
+/* SHOWCASE HERO */
+.showcase{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .9;
+}
+
+.showcase .showcase-content{
+    width: 800px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    margin: 180px auto;
+}
+
+.showcase-content #options-div{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.showcase-content #options-div select{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px;
+    margin-right: 15px;
+    border-bottom: 2px solid red;
+}
+
+
+
+.showcase-content h1{
+    font-weight: 600;
+    font-size: 2.9rem;
+}
+
+.showcase-content button{
+    background-color: red;
+    padding: 10px 40px;
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+    border: none;
+}
+
+.showcase-content #offer-div{
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.showcase-content #offer-div img{
+   width: 100px;
+   margin-bottom: 10px;
+}
+
+#special-image{
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 10px;
+}
+
+#special-image img{
+    width: 280px;
+}
+
+
+/* SHOWCASE DETAILS */
+#showcase-details{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+#showcase-details #showcase-details-div1{
+    padding: 0 20px;
+}
+
+#showcase-details #showcase-details-div1 button{
+    background-color: red;
+    padding: 10px 40px;
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+    border: none;
+}
+
+
+
+/* TRADE WORTH SECTION */
+#trade-worth{
+    width: 550px;
+    margin: 20px auto;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 30px;
+    border: 2px solid blue;
+    border-radius: 8px;
+}
+
+
+
+/* FIND NEXT TOYOTA */
+#next-toyota{
+    margin-top: 20px;
+    background-color: #cccaca;
+    padding: 20px 20px;
+    
+}
+
+#next-toyota p{
+    margin-top: 20px;
+    color: #3d3d3d;
+    text-align: center;
+    font-size: 30px;
+}
+
+#next-toyota ul{
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+#next-toyota ul li{
+    padding-right: 20px;
+}
+
+#next-toyota ul li:hover{
+    border-bottom: 2px solid red;
+    cursor: pointer;
+}
+
+.car-divs{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.false{
+    display: none;
+}
+
+
+/* BUY YOUR CAR */
+#buy-car{
+  padding: 20px 20px;
+  margin-top: 25px;  
+}
+
+#buy-car img{
+    display: block;
+    width: 900px;
+    margin: 0 auto;
+}
+
+
+
+/* OFFER DIV */
+#offer-2{
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+#offer-2-div{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+
+/* REVIEWS */
+#reviews{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+#reviews p{
+    text-align: center;
+}
+
+#reviews #reviews-img{
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+
+#reviews button{
+    background-color: red;
+    padding: 10px 40px;
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* TOYOTA ABOUT SECTION */
+#toyota-about{
+    margin-top: 20px;
+    background-image: url('../images/toyotabackground.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#toyota-about #overlay{
+    padding: 250px 20px 20px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+}
+
+
+/* MAP BOX */
+#map-box{
+    background-image: url('../images/toyotabackground2.PNG');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+
+/* FOOTER */
+footer{
+    background-color: #e2e1e1;
+    padding: 20px 40px;
+}
+
+footer #box-1{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer #box-1 .cols a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #868585;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+footer #box-2{
+    margin-top: 60px;
+   display: flex; 
+   align-items: center;
+   justify-content: space-between;
+}
+
+footer #box-2 #footer-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer #box-2 #img-1{
+    width: 70px;
+}
+
+footer #box-2 #img-2 img{
+    display: block;
+    padding-left: 10px;
+    border-left: 1px solid #cccbcb;
+    width: 80px;
+}
+
+footer #box-2 #footer-socials i{
+    background-color: red;
+    padding: 4px;
+    color: #fff;
+    border-radius: 6px;
+}
+
+footer #box-3{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+footer #box-3 div ul{
+    display: flex;
+    list-style-type: none;
+}
+
+footer #box-3 div ul li{
+    padding-right: 9px;
+}
+
+footer #box-3 div p{
+    padding-left: 30px;
+}
+
+/* SIGNUP PAGE */
+
+#signup{
+    position: relative;
+    background-image: url('../images/cslide11.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#register-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.form-container{
+    background-color: red;
+    max-width: 600px;
+    margin: 130px auto 0 auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.form-container h2{
+    text-transform: uppercase;
+}
+
+.form-container button{
+    display: block;
+    margin: auto;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    padding: 8px 10px;
+    width: 200px;
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.form-container button:hover{
+    background-color: #350202;
+}
+
+
+
+
+
+
+/* CART PAGE */
+#cart{
+    overflow-x:auto ;
+}
+#cart table{
+   width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img{
+    width: 70px;
+}
+
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6)
+{
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-radius: none;
+}
+
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td{
+   padding-top: 15px; 
+}
+
+#cart table tbody td{
+    font-size: 13px;
+}
+
+#cart-add{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+#coupon h3{
+    padding-bottom: 15px;
+}
+
+#coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e1e1e1;
+}
+
+#coupon button{
+    background-color: #088178;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+#sub-total{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+#sub-total table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#sub-total table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+
+#sub-total h3{
+    padding-bottom: 15px;
+}
+
+#sub-total button{
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+}
+
+
+
+ /* SHOP PAGE */
+ #page-header{
+    background-image: url(./img/banner/b1.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  #page-header h2, #page-header p{
+    color: #fff;
+  }
+
+  #pagination{
+    text-align: center;
+  }
+
+  #pagination a{
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+
+
+  /* PRODUCTS */
+#product1{
+    text-align: center;
+}
+
+#product1 .product-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .product{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;  
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#product1 .product:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+#product1 .product img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .product .description{
+   text-align: start;
+   padding: 10px 0; 
+}
+
+#product1 .product .description span{
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .product .description h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 16px;
+}
+
+#product1 .product .description i{
+    font-size: 14px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .product .description h4{
+    padding-top: 7px;
+    font-size: 15px;
+    color: #088178;
+}
+
+#product1 .product #cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    overflow: hidden;
+}
+
+#product1 .product button{
+    outline: none;
+    border: none;
+}
+
+.admin{
+    background-color: rgb(172, 171, 171);
+    padding: 8px 10px;
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 6px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.admin ul{
+    list-style-type: none;
+}
+
+.admin ul li{
+    padding-top: 10px;
+}
+
+.admin ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.admin ul li a:hover{
+    color: #f8f6f6;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media(max-width: 799px){
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #7d7d7e;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1) ;
+        padding: 80px 0 0 10px;
+        transition: 0.7s;
+    }
+
+    #navbar.active{
+        right: 0;
+        z-index: 1;
+    }
+
+    #header2{
+        z-index: 1;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        margin-right: 380px;
+        display: flex;
+    }
+
+    #mobile i{
+      color: #1a1a1a;
+      font-size: 24px;
+      padding-left: 20px;  
+    }
+
+    #close{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+        cursor: pointer;
+        display: initial;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+
+    #nav-location p{
+        font-size: 12px;
+    }
+
+    
+    #header2-ul ul li a{
+        font-size: 15px;
+    }
+
+
+    /* SHOWCASE HERO */
+    .showcase{
+        height: 600px;
+    }
+
+    #special-image{
+        display: none;
+    }
+
+    .showcase .showcase-content{
+        margin: 120px auto;
+    }
+
+    .showcase .showcase-content h1{
+        font-size: 40px;
+    }
+
+    .showcase video{
+        height: 320px;
+    }
+
+    .showcase-content #options-div{
+        padding: 0 50px;
+        margin-top: 165px;
+        z-index: 100;
+    }
+    
+    .showcase-content #options-div select{
+        border: none;
+        border-bottom: 2px solid red;
+
+    }
+
+    .showcase #offer-div {
+        margin-top: 40px;
+        padding: 0 50px;
+        color: black;
+        flex-wrap: wrap;
+    }
+
+    .showcase #offer-div img{
+        display: none;
+    }
+
+    .showcase #offer-div div{
+        width: 345px;
+        border-radius: 30px;
+        background-color: red;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    /* SHOWCASE DETAILS */
+    #showcase-details{
+        grid-template-columns: 1fr;
+        padding: 0 50px;
+    }
+
+    #showcase-details h2{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #showcase-details p{
+        margin-top: 20px;
+        text-align: start;
+    }
+
+    #showcase-details button{
+        display: block;
+        margin: auto;
+    }
+
+    #showcase-details-div2 iframe{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .car-divs img{
+        width: 130px;
+    }
+
+    .car-divs h4{
+        font-size: 15px;
+    }
+
+    /* BUY YOUR CAR */
+    #buy-car{
+        padding: 0 50px; 
+  }
+  
+    #buy-car img{
+        width: 600px;
+    }
+
+    /* OFFER DIV */
+    #offer-2{
+        margin-top: 20px;
+        padding: 0 50px;
+    }
+
+    #offer-2-div{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 40px;
+    }
+
+    #offer-2-1 img{
+        width: 100%;
+        height: 200px;
+    }
+
+    /* REVIEWS */
+    #reviews{
+        margin-top: 90px;
+    }
+
+    #reviews p{
+        font-size: 30px;
+        color: #3d3d3d;
+    }
+
+    #reviews-img{
+        flex-wrap: wrap;
+    }
+
+    #reviews-img img{
+        width: 290px;
+        margin-bottom: 10px;
+    }
+
+    /* TOYOTA ABOUT SECTION */
+    #toyota-about #overlay{
+        padding: 250px 50px 20px 50px;
+    }
+
+ }
+
+
+
+
+
+ @media(max-width: 477px){
+
+    #header{
+        padding: 10px 0;
+    }
+
+    #nav-location{
+       display: none;
+    }
+
+    #header2{
+        padding: 0 20px;
+    }
+
+    #header2 #header2-images #img-1{
+        width: 50px;
+    }
+
+    #header2 #header2-images #img-2 img{
+        width: 60px;
+    }
+    
+    #header2-ul ul li a{
+        font-size: 6px;
+    }
+
+
+    /* SHOWCASE HERO */
+    .showcase{
+        background-color: black;
+        height: 965px;
+    }
+
+
+    .showcase .showcase-content{
+       margin-top: 400px;
+       margin-left: 10px;
+    }
+
+    .showcase .showcase-content h1{
+        margin-right: 400px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .showcase video{
+        margin-top: 20px;
+        height: 320px;
+    }
+
+    .showcase-content #options-div{
+        flex-direction: column;
+        padding: 0 20px;
+        margin-top: 25px;
+        z-index: 100;
+        margin-right: 400px;
+    }
+    
+    .showcase-content #options-div select{
+        margin-bottom: 5px;
+        width: 350px;
+        border: none;
+        border-bottom: 2px solid rgb(14, 13, 13);
+
+    }
+
+    .showcase #offer-div {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0 30px;
+        color: black;
+        flex-direction: column;
+        background-color: #fff;
+    }
+
+
+    .showcase #offer-div div{
+        margin-right: 400px;
+        width: 305px;
+        border-radius: 30px;
+        background-color: red;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+
+    /* SHOWCASE DETAILS */
+    #showcase-details{
+        padding-top: 50px;
+        
+    }
+
+    #showcase-details h2{
+        text-align: center;
+        font-weight: bold;
+        font-size: 19px;
+    }
+
+    #showcase-details p{
+        margin-top: 20px;
+        text-align: start;
+    }
+
+    #showcase-details button{
+        display: block;
+        margin: auto;
+    }
+
+    #showcase-details-div2 iframe{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .car-divs img{
+        width: 130px;
+    }
+
+    .car-divs h4{
+        font-size: 15px;
+    }
+
+
+    #trade-worth{
+        width: 400px;
+    }
+
+    #trade-worth img{
+        width: 60px;
+    }
+
+    #trade-worth h2{
+        font-size: 20px;
+    }
+
+    #trade-worth p{
+        font-size: 10px;
+    }
+
+    #next-toyota ul li{
+        font-size: 8px;
+    }
+
+    .car-divs img{
+        width: 50px;
+    }
+
+    .car-divs h4{
+        font-size: 8px;
+    }
+
+    /* BUY YOUR CAR */
+    #buy-car{
+        padding: 0 20px; 
+  }
+  
+    #buy-car img{
+        width: 300px;
+    }
+
+    /* OFFER DIV */
+    #offer-2{
+        margin-top: 20px;
+        padding: 0 40px;
+    }
+
+    #offer-2-div{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    #offer-2-1 img{
+        width: 100%;
+        height: 100px;
+    }
+
+    /* REVIEWS */
+    #reviews{
+        margin-top: 60px;
+    }
+
+    #reviews p{
+        font-size: 20px;
+        color: #3d3d3d;
+    }
+
+    #reviews-img{
+        flex-wrap: wrap;
+    }
+
+    #reviews-img img{
+        width: 290px;
+        margin-bottom: 10px;
+    }
+
+    /* TOYOTA ABOUT SECTION */
+    #toyota-about #overlay{
+        padding: 250px 50px 20px 50px;
+    }
+
+    footer #box-3{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+    }
+    
+    footer #box-3 div ul{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+    }
+    
+    footer #box-3 div ul li{
+        margin-bottom: 10px;
+        padding-right: 9px;
+    }
+    
+    footer #box-3 div p{
+        padding-left: 20px;
+    }
+
+    #box-1 .cols{
+        margin-bottom: 20px;
+    }
+    
+
+    .form-container{
+        width: 300px;
+    }
+
+    /* CART PAGE */
+    #cart-add{
+        flex-direction: column; 
+     }
+ 
+     #coupon{
+         width: 100%;
+     }
+ 
+     #sub-total{
+         width: 100%;
+         padding: 20px;
+     }
+
+
+     .search_bar-container{
+        width: var(--container-width-md);
+    }
+    
+    
+ }
